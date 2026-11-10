@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatería Don David - Catálogo de Calzado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        don: {
+                            fondo: '#f5efe6',
+                            claro: '#faf6ee',
+                            borde: '#e3d6c0',
+                            input: '#d9c9ad',
+                            beige: '#e8dcc8'
+                        },
+                        amber: {
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                            950: '#451a03'
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5efe6',
+                            200: '#e8dcc8',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-don-fondo text-stone-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Header / Navegación -->
+    <header class="bg-white border-b border-don-borde sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <a href="inicio.html" class="flex items-center gap-2">
+                <span class="text-xl md:text-2xl font-bold tracking-widest text-amber-900">ZAPATERÍA DON DAVID</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-700">
+                <a href="inicio.html" class="text-amber-900 font-semibold border-b-2 border-amber-800 pb-1">Inicio</a>
+                <a href="catalogo.html" class="hover:text-amber-800 transition">Catálogo Galería</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="busqueda.html" class="p-2 text-amber-900 hover:bg-don-claro rounded-lg transition" aria-label="Ir a búsqueda">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Informativo de Catálogo -->
+    <div class="bg-amber-900 text-amber-50 text-xs py-1.5 text-center font-medium tracking-wide">
+        CATÁLOGO DE CONSULTA Y EXPOSICIÓN · NO INCLUYE VENTA EN LÍNEA
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-white border-b border-don-borde">
+        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <span class="inline-block bg-don-beige text-amber-950 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-don-input">Tradición y Confort</span>
+                <h1 class="text-3xl md:text-4xl font-bold text-amber-900 tracking-tight leading-tight">Calzado Artesanal y de Calidad para Toda la Familia</h1>
+                <p class="text-stone-600 text-sm md:text-base leading-relaxed">Explora nuestro catálogo de modelos disponibles en sucursal. Consulta especificaciones, materiales, tallas y estilos antes de tu visita.</p>
+                <div class="pt-2 flex flex-wrap gap-3">
+                    <a href="catalogo.html" class="bg-amber-800 hover:bg-amber-900 active:bg-amber-950 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition shadow">Explorar Catálogo</a>
+                    <a href="busqueda.html" class="border border-amber-800 text-amber-900 hover:bg-amber-50 text-sm font-medium px-5 py-2.5 rounded-lg transition">Buscar por Modelo</a>
+                </div>
+            </div>
+            <div class="bg-don-claro border border-don-borde rounded-xl p-6 text-center shadow-sm">
+                <div class="bg-white rounded-lg p-8 border border-don-borde flex flex-col items-center justify-center">
+                    <svg class="w-20 h-20 text-amber-800 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l9-5 9 5v9l-9 5-9-5zM3 8l9 5 9-5M12 13v9"/></svg>
+                    <p class="text-amber-900 font-semibold text-lg">Mocasín Tradicional de Piel</p>
+                    <p class="text-stone-500 text-xs mt-1">Corte 100% Piel Vacuno · Suela Antiderrapante</p>
+                    <span class="mt-4 bg-amber-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Modelo Destacado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías Destacadas -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10 flex-1">
+        <section>
+            <div class="flex items-center justify-between mb-6 border-b border-don-borde pb-2">
+                <h2 class="text-xl font-bold text-amber-900 uppercase tracking-wide">Categorías de Calzado</h2>
+                <a href="catalogo.html" class="text-xs text-amber-800 font-semibold hover:underline transition">Ver todas →</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <a href="catalogo.html?categoria=caballero" class="bg-white border border-don-borde rounded-xl p-4 text-center hover:border-amber-700 hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-don-claro rounded-full flex items-center justify-center mx-auto mb-2 text-amber-900 group-hover:bg-amber-800 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-stone-800 group-hover:text-amber-900 transition">Caballero</span>
+                </a>
+                <a href="catalogo.html?categoria=dama" class="bg-white border border-don-borde rounded-xl p-4 text-center hover:border-amber-700 hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-don-claro rounded-full flex items-center justify-center mx-auto mb-2 text-amber-900 group-hover:bg-amber-800 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-stone-800 group-hover:text-amber-900 transition">Dama</span>
+                </a>
+                <a href="catalogo.html?categoria=deportivo" class="bg-white border border-don-borde rounded-xl p-4 text-center hover:border-amber-700 hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-don-claro rounded-full flex items-center justify-center mx-auto mb-2 text-amber-900 group-hover:bg-amber-800 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-stone-800 group-hover:text-amber-900 transition">Deportivo</span>
+                </a>
+                <a href="catalogo.html?categoria=infantil" class="bg-white border border-don-borde rounded-xl p-4 text-center hover:border-amber-700 hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-don-claro rounded-full flex items-center justify-center mx-auto mb-2 text-amber-900 group-hover:bg-amber-800 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-stone-800 group-hover:text-amber-900 transition">Infantil</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Galería Destacada -->
+        <section>
+            <div class="flex items-center justify-between mb-6 border-b border-don-borde pb-2">
+                <h2 class="text-xl font-bold text-amber-900 uppercase tracking-wide">Modelos en Exhibición</h2>
+                <span class="text-xs text-stone-500 font-semibold uppercase tracking-wider">Muestras del catálogo</span>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-xl border border-don-borde p-4 shadow-sm hover:border-amber-700 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="bg-don-claro rounded-lg h-44 flex items-center justify-center border border-don-borde mb-3 text-xs text-stone-500 font-medium">Imagen</div>
+                        <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Caballero · Vestir</p>
+                        <h3 class="font-bold text-stone-800 text-base mt-1">Mocasín Piel Clásico</h3>
+                        <p class="text-xs text-stone-500 mt-1">Corte Vacuno | Forro Cerdo | Tallas 25-29</p>
+                        <p class="text-lg font-bold text-amber-900 mt-2">$899 MXN <span class="text-xs font-normal text-stone-500">(Ref.)</span></p>
+                    </div>
+                    <a href="detalle.html" class="mt-4 w-full bg-don-beige hover:bg-amber-800 hover:text-white text-amber-950 text-xs font-semibold py-2 rounded-lg text-center transition">Ver Ficha Técnica</a>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-xl border border-don-borde p-4 shadow-sm hover:border-amber-700 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="bg-don-claro rounded-lg h-44 flex items-center justify-center border border-don-borde mb-3 text-xs text-stone-500 font-medium">Imagen</div>
+                        <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Deportivo · Urbano</p>
+                        <h3 class="font-bold text-stone-800 text-base mt-1">Tenis Confort Ultra Light</h3>
+                        <p class="text-xs text-stone-500 mt-1">Textil Transpirable | Suela EVA | Tallas 22-28</p>
+                        <p class="text-lg font-bold text-amber-900 mt-2">$749 MXN <span class="text-xs font-normal text-stone-500">(Ref.)</span></p>
+                    </div>
+                    <a href="detalle.html" class="mt-4 w-full bg-don-beige hover:bg-amber-800 hover:text-white text-amber-950 text-xs font-semibold py-2 rounded-lg text-center transition">Ver Ficha Técnica</a>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-xl border border-don-borde p-4 shadow-sm hover:border-amber-700 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="bg-don-claro rounded-lg h-44 flex items-center justify-center border border-don-borde mb-3 text-xs text-stone-500 font-medium">Imagen</div>
+                        <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Caballero · Trabajo</p>
+                        <h3 class="font-bold text-stone-800 text-base mt-1">Bota Industrial Piel Nubuck</h3>
+                        <p class="text-xs text-stone-500 mt-1">Suela Antiderrapante | Costura Reforzada | Tallas 25-30</p>
+                        <p class="text-lg font-bold text-amber-900 mt-2">$1,199 MXN <span class="text-xs font-normal text-stone-500">(Ref.)</span></p>
+                    </div>
+                    <a href="detalle.html" class="mt-4 w-full bg-don-beige hover:bg-amber-800 hover:text-white text-amber-950 text-xs font-semibold py-2 rounded-lg text-center transition">Ver Ficha Técnica</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-don-borde mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-xs text-stone-500 space-y-2">
+            <p>Este sitio web es un catálogo exclusivamente de visualización y consulta informativa.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
