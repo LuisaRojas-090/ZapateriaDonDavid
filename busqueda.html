@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda - Zapatería Don David</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        don: {
+                            fondo: '#f5efe6',
+                            claro: '#faf6ee',
+                            borde: '#e3d6c0',
+                            input: '#d9c9ad',
+                            beige: '#e8dcc8'
+                        },
+                        amber: {
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                            950: '#451a03'
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5efe6',
+                            200: '#e8dcc8',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-don-fondo text-stone-800 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white border-b border-don-borde sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="inicio.html" class="text-xl font-bold tracking-widest text-amber-900">ZAPATERÍA DON DAVID</a>
+            <a href="catalogo.html" class="text-xs text-amber-800 font-semibold hover:underline transition">Ver todo el catálogo</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full space-y-6">
+        <!-- Input de Búsqueda -->
+        <div class="bg-white border border-don-borde rounded-xl p-6 shadow-sm space-y-3">
+            <h1 class="text-lg font-semibold text-amber-900">Buscar Calzado en Catálogo</h1>
+            <div class="flex gap-2">
+                <input type="text" placeholder="Escribe 'Mocasín', 'Bota', 'Piel' o código SKU..." class="flex-1 border border-don-input rounded-lg px-4 py-2.5 text-sm bg-white text-stone-800 placeholder-stone-400 outline-none transition focus:border-amber-700 focus:ring-2 focus:ring-amber-200">
+                <button class="bg-amber-800 hover:bg-amber-900 active:bg-amber-950 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Buscar</button>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-xs text-stone-500 pt-1">
+                <span class="font-semibold uppercase tracking-wide">Búsquedas frecuentes:</span>
+                <button class="underline text-amber-800 hover:text-amber-900 transition">Mocasín Piel</button>
+                <button class="underline text-amber-800 hover:text-amber-900 transition">Bota Trabajo</button>
+                <button class="underline text-amber-800 hover:text-amber-900 transition">Tenis Confort</button>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div>
+            <p class="text-xs text-stone-500 mb-3 uppercase tracking-wider font-semibold">Resultados coincidentes (2)</p>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl border border-don-borde p-4 shadow-sm flex items-center gap-4 transition hover:border-amber-700 hover:shadow-md">
+                    <div class="bg-don-claro border border-don-borde rounded-lg w-20 h-20 flex items-center justify-center text-xs text-stone-500 font-medium">Imagen</div>
+                    <div>
+                        <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">SKU: DD-1045</span>
+                        <h3 class="font-bold text-stone-800 text-sm">Mocasín Piel Clásico</h3>
+                        <p class="text-xs text-stone-500 mt-0.5">$899 MXN</p>
+                        <a href="detalle.html" class="inline-block mt-2 text-xs text-amber-900 font-semibold hover:underline transition">Ver Ficha →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-don-borde p-4 shadow-sm flex items-center gap-4 transition hover:border-amber-700 hover:shadow-md">
+                    <div class="bg-don-claro border border-don-borde rounded-lg w-20 h-20 flex items-center justify-center text-xs text-stone-500 font-medium">Imagen</div>
+                    <div>
+                        <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">SKU: DD-1067</span>
+                        <h3 class="font-bold text-stone-800 text-sm">Bota Industrial Piel</h3>
+                        <p class="text-xs text-stone-500 mt-0.5">$1,199 MXN</p>
+                        <a href="detalle.html" class="inline-block mt-2 text-xs text-amber-900 font-semibold hover:underline transition">Ver Ficha →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-don-borde py-4 text-center text-xs text-stone-500">
+        Zapatería Don David · Catálogo Informativo
+    </footer>
+
+</body>
+</html>
